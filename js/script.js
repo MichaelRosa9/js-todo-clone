@@ -22,15 +22,28 @@ for(var i = 0; i< toDo_list.length; i++){
   $(clone).find('.text').append(list_item)
 }
 
+//funzione che scatta quando permo il tasto enter dentro l'input text
 $('#to-do input').keyup(function(event){
-  
+
+  //l'event.which mi indica il valore numerico del tasto premuto. in questo caso il tasto enter e' 13 e ogni qualvolta che lo si preme, parte l'if statement
   if(event.which === 13){
+
+    //definisco con una variabile il valore dell'input messo dentro
     var input = $('input').val();
+
+    //definisco con una variabile il clone di un li dentro un div con classse tamplate che sta in fondo al main
     var clone = $(".template li").clone();
 
+    //definisco dentro un var il clone dell' li che sta dentro il div template che sta in fondo al main
     $(".template li").clone();
+
+    //appendo la lista clonata dentro l' ul
     $('#to-do ul').append(clone);
-    $(clone).find('.text').append(input)
+
+    //appendo il testo scritto nell'input e lo salvo nella lista clonata
+    $(clone).find('.text').append(input);
+
+    //una volta appeso il testo scritto nell'input cancello il contenuto
     $(this).val('');
   }
 
