@@ -1,9 +1,6 @@
 $(function(){
 
 /* 
-1` fare l'HTML con input e ul li
-2nel JS creare un arrai con stringhe
-3ciclo for dell['array per sampare a video gli elementi facendo un append dentro ul 
 4 al click del cestino elminare il parent(O)
 5 intercettare il heyup() dell'impunt ENTER per aggiungere l'elemnto della lista e ripulire l'imput
 */
@@ -21,6 +18,8 @@ for(var i = 0; i< toDo_list.length; i++){
   //appendo la stringa dell'array dentro il clone
   $(clone).find('.text').append(list_item)
 }
+
+
 
 //funzione che scatta quando permo il tasto enter dentro l'input text
 $('#to-do input').keyup(function(event){
@@ -46,8 +45,15 @@ $('#to-do input').keyup(function(event){
     //una volta appeso il testo scritto nell'input cancello il contenuto
     $(this).val('');
   }
+});
 
-})
+
+//funzione del click sul cestino che mi cancella la lista
+
+$('ul li').on("click", "i.fa-trash-alt", function(){
+  $(this).parent().remove('li');
+  
+});
 
 
 });
