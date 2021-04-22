@@ -15,8 +15,9 @@ for(var i = 0; i< toDo_list.length; i++){
   var list_item = toDo_list[i];
   cloned.find('span').append(list_item)
   
-
-
+  
+  
+  console.log(cloned);
 }
 
 
