@@ -29,27 +29,36 @@ $('#to-do input').keyup(function(event){
 
     //definisco con una variabile il valore dell'input messo dentro
     var input = $('input').val();
+    
+    if(input.length > 3){
 
-    //definisco con una variabile il clone di un li dentro un div con classse tamplate che sta in fondo al main
-    var clone = $(".template li").clone();
+      //definisco con una variabile il clone di un li dentro un div con classse tamplate che sta in fondo al main
+      var clone = $(".template li").clone();
+  
+      //definisco dentro un var il clone dell' li che sta dentro il div template che sta in fondo al main
+      $(".template li").clone();
+  
+      //appendo la lista clonata dentro l' ul
+      $('#to-do ul').append(clone);
+  
+      //appendo il testo scritto nell'input e lo salvo nella lista clonata
+      $(clone).find('.text').append(input);  
+      //una volta appeso il testo scritto nell'input cancello il contenuto
+      $(this).val('');
 
-    //definisco dentro un var il clone dell' li che sta dentro il div template che sta in fondo al main
-    $(".template li").clone();
-
-    //appendo la lista clonata dentro l' ul
-    $('#to-do ul').append(clone);
-
-    //appendo il testo scritto nell'input e lo salvo nella lista clonata
-    $(clone).find('.text').append(input);
-
-    //una volta appeso il testo scritto nell'input cancello il contenuto
-    $(this).val('');
+      //condizione per levare la finestra alert
+      if(!$('.alert').hasClass('hidden')){
+        $('.alert').addClass('hidden')
+      }
+    }else{//condizione per mostrare la finestra alert
+      $('.alert').removeClass('hidden');   
+    }
+    
   }
 });
 
-
 //funzione del click sul cestino che mi cancella la lista
-$('ul li').on("click", "i.fa-trash-alt", function(){
+$(document).on("click", "i.fa-trash-alt", function(){
   $(this).parent().remove('li');
 });
 
