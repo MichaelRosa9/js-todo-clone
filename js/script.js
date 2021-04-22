@@ -49,10 +49,8 @@ $('#to-do input').keyup(function(event){
 
 
 //funzione del click sul cestino che mi cancella la lista
-
 $('ul li').on("click", "i.fa-trash-alt", function(){
   $(this).parent().remove('li');
-  
 });
 
 
