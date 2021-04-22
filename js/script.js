@@ -57,6 +57,15 @@ $('#to-do input').keyup(function(event){
   }
 });
 
+
+$('#to-do input').click(function(){
+  $(this).toggleClass('active');
+});
+
+$(('#to-do input')).mouseleave(function(){
+  $(this).removeClass('active');
+})
+
 //funzione del click sul cestino che mi cancella la lista
 $(document).on("click", "i.fa-trash-alt", function(){
   $(this).parent().remove('li');

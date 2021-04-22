@@ -53,11 +53,20 @@ h1{
 
 /* alert */
 .alert{
+  position: relative;
   display: block;
   background-color: #fff;
-  width: 50%;  
+  width: 55%;  
   padding: 1%;
   border-radius: 5px;
+}
+
+.alert i {
+  position: absolute;
+  top: 7px;
+  left: 101px;
+  font-size: 22px;
+  color: rgb(241, 71, 71);
 }
 /* list */
 #to-do ul li{
