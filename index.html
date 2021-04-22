@@ -17,10 +17,7 @@
     <div id="to-do">
       <input type="text" placeholder="Write down things to do?">
       <ul>        
-        <li>
-          <span></span>
-          <i class="far fa-trash-alt"></i>
-        </li>
+        
       </ul>
     </div>
   
@@ -30,6 +27,15 @@
       </ul>
     </div>
 
+
+    <!-- Clone template -->
+    <div class="template hidden"><!-- ha la classe hidden cosi che quando lo clono grazie a jquery non mi presenta uno spazio vuoto nella lista -->
+      <li>
+        <span class="text"></span>
+        <i class="far fa-trash-alt"></i>
+      </li>
+    </div>
+    <!-- /Clone template -->
   </main>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

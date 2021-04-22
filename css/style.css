@@ -62,6 +62,11 @@ h1{
 #to-do ul li:last-child{
   border: none;
 }
+
+.hidden {
+  display: none;
+}
+
 #to-do ul li span {
   width: 100%;
   overflow: hidden;

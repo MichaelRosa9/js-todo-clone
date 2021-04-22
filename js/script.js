@@ -9,15 +9,17 @@ $(function(){
 */
 var toDo_list = ["Go to the grocery store and buy food", "Practice daily work out", "Study your homework"];
 
+//faccio un ciclo per estrarre le stringe individuali da appendere dentro un li contenuto in un div class="template" che sta in fondo al documento HMTL ma che clono a sua volta per appendere dentro l' ul che sta dintro il div #to-do
 for(var i = 0; i< toDo_list.length; i++){
-  var cloned = $("#to-do ul li").clone();
-  
   var list_item = toDo_list[i];
-  cloned.find('span').append(list_item)
+  var clone = $(".template li").clone();
   
+  $('#to-do ul').append(clone);
+  console.log(clone)
   
-  
-  console.log(cloned);
+  $(clone).find('.text').append(list_item)
+
+
 }
 
 
