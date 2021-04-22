@@ -48,10 +48,12 @@ $('#to-do input').keyup(function(event){
 
       //condizione per levare la finestra alert
       if(!$('.alert').hasClass('hidden')){
-        $('.alert').addClass('hidden')
+        
+        $('.alert').addClass('hidden').slideDown();
       }
     }else{//condizione per mostrare la finestra alert
       $('.alert').removeClass('hidden');   
+
     }
     
   }

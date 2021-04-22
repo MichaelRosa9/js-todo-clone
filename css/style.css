@@ -68,6 +68,7 @@ h1{
   font-size: 22px;
   color: rgb(241, 71, 71);
 }
+
 /* list */
 #to-do ul li{
   display: flex;
@@ -81,10 +82,6 @@ h1{
 
 #to-do ul li:last-child{
   border: none;
-}
-
-.hidden {
-  display: none;
 }
 
 #to-do ul li span {
@@ -102,4 +99,9 @@ h1{
 #to-do ul li i:hover{
   color: #fff;
   cursor: pointer;
+}
+
+/* js class */
+.hidden {
+  display: none;
 }
